@@ -17,12 +17,12 @@
             <ul class="header-navigation__site-list">
                 <li class="header-navigation__site-item"><a href="#">Каталог товаров</a>
                     <ul>
-                        <li class="header-navigation__site-sub-item"><a href="#"><img src="#" alt="#">Виртуальная реальность</a></li>
-                        <li class="header-navigation__site-sub-item"><a href="#"><img src="#" alt="#">Моноподы для селфи</a></li>
-                        <li class="header-navigation__site-sub-item"><a href="#"><img src="#" alt="#">Экшн-камеры</a></li>
-                        <li class="header-navigation__site-sub-item"><a href="#"><img src="#" alt="#">Фитнес-браслеты</a></li>
-                        <li class="header-navigation__site-sub-item"><a href="#"><img src="#" alt="#">Умные часы</a></li>
-                        <li class="header-navigation__site-sub-item"><a href="#"><img src="#" alt="#">Квадрокоптеры</a></li>
+                        <li class="header-navigation__site-item"><a href="#"><img src="#" alt="#">Виртуальная реальность</a></li>
+                        <li class="header-navigation__site-item"><a href="#"><img src="#" alt="#">Моноподы для селфи</a></li>
+                        <li class="header-navigation__site-item"><a href="#"><img src="#" alt="#">Экшн-камеры</a></li>
+                        <li class="header-navigation__site-item"><a href="#"><img src="#" alt="#">Фитнес-браслеты</a></li>
+                        <li class="header-navigation__site-item"><a href="#"><img src="#" alt="#">Умные часы</a></li>
+                        <li class="header-navigation__site-item"><a href="#"><img src="#" alt="#">Квадрокоптеры</a></li>
                     </ul>
                 </li>
                 <li class="header-navigation__site-item"><a href="#">Доставка</a></li>
@@ -43,41 +43,44 @@
         <div class="filtres">
             <span class="filtre__name">Фильтр:</span>
             <form class="filtres__form">
-                <ul class="filtres__list">
-                    <li class="filtres__item">Стоимость
-                        <ul class="filtres__sub-list">
-                            <li class="filtres__sub-item">От 0</li>
-                            <li class="filtres__sub-item">До 5000</li>
-                        </ul>
-                    </li>
-                    <li class="filtres__item">Цвет
-                        <ul class="filtres__sub-list">
-                            <li class="filtres__sub-item"><label><input type="checkbox" name="color" value="Чёрный">Чёрный</label></li>
-                            <li class="filtres__sub-item"><label><input type="checkbox" name="color" value="Белый">Белый</label></li>
-                            <li class="filtres__sub-item"><label><input type="checkbox" name="color" value="Синий">Синий</label></li>
-                            <li class="filtres__sub-item"><label><input type="checkbox" name="color" value="Красный">Красный</label></li>
-                            <li class="filtres__sub-item"><label><input type="checkbox" name="color" value="Розовый">Розовый</label></li>
-                        </ul>
-                    </li>
-                    <li class="filtres__item">Bluetooth
-                        <ul class="filtres__sub-list">
-                            <li class="filtres__sub-item"><label><input name="Bluetooth" type="radio" value="Yes">Есть</label></li>
-                            <li class="filtres__sub-item"><label><input name="Bluetooth" type="radio" value="No">Нет</label></li>
-                        </ul>
-                    </li>
-                </ul>
+                <fieldset>
+                    <legend>Стоимость</legend>
+                    <ul class="filtres__list">
+                        <li class="filtres__item">От 0</li>
+                        <li class="filtres__item">До 5000</li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Цвет</legend>
+                    <ul class="filtres__list">
+                        <li class="filtres__item"><label><input type="checkbox" name="color" value="Чёрный">Чёрный</label></li>
+                         <li class="filtres__item"><label><input type="checkbox" name="color" value="Белый">Белый</label></li>
+                         <li class="filtres__item"><label><input type="checkbox" name="color" value="Синий">Синий</label></li>
+                         <li class="filtres__item"><label><input type="checkbox" name="color" value="Красный">Красный</label></li>
+                         <li class="filtres__item"><label><input type="checkbox" name="color" value="Розовый">Розовый</label></li>
+                     </ul>
+                </fieldset>
+                <fieldset>
+                    <legend>Bluetooth</legend>
+                    <ul class="filtres__list">
+                        <li class="filtres__item"><label><input name="Bluetooth" type="radio" value="Yes">Есть</label></li>
+                        <li class="filtres__item"><label><input name="Bluetooth" type="radio" value="No">Нет</label></li>
+                    </ul>
+                </fieldset>
             </form>
             <a href="#">Показать</a>
         </div>
         <div class="item-catalog">
-            <div class="item-catalog__item-sort">
-                <span>Сортировка:</span>
-                <ul class="item-catalog_list">
-                    <li class="item-catalog_item">По цене</li>
-                    <li class="item-catalog_item">По типу</li>
-                    <li class="item-catalog_item">По популярности</li>
-                </ul>
-            </div>
+            <form>
+                <fieldset class="item-catalog__item-sort">
+                    <legend>Сортировка:</legend>
+                    <ul class="item-catalog_list">
+                        <li class="item-catalog_item"><label for="item-sort-price"><input type="radio" name="item-sort" value="price" id="item-sort-price">По цене</label></li>
+                        <li class="item-catalog_item"><label for="item-sort-type"><input type="radio" name="item-sort" value="type" id="item-sort-type">По типу</label></li>
+                        <li class="item-catalog_item"><label for="item-sort-popular"><input type="radio" name="item-sort" value="popular" id="item-sort-popular">По популярности</label></li>
+                    </ul>
+                </fieldset>
+            </form>
             <section class="items">
                 <h3 class="hidden">Товары</h3>
                 <a href="#"><article class="items__item-1">
