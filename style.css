@@ -1,0 +1,248 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url(fonts/gilroyextrabold.woff2);
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url(fonts/gilroylight.woff2);
+  font-weight: 300;
+  font-style: normal;
+}
+
+* {
+ -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+
+body {
+  font-family: 'Giltoy', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+a {text-decoration: none;}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
+/*КНОПКА*/
+.button {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  width: 220px;
+  height: 40px;
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: rgba(255, 204, 0);
+  width: 220px;
+  height: 8px;
+  bottom: 22px;
+  z-index: -1;
+}
+
+.button:hover::after,
+.button:focus::after  {
+  height: 40px;
+  bottom: 6px;
+}
+
+.button:active {color: rgba(0, 0, 0, 0.3);}
+
+/*ШАПКА*/
+
+header {background-color: #f7e296;}
+
+header a{
+  text-transform: uppercase;
+  color: black;
+}
+
+header a:hover,
+header a:focus {opacity: 0.6;}
+
+header a:active {opacity: 0.3;} 
+
+header ul {list-style: none;}
+
+.logo {font-size: 48px;}
+ 
+.header-navigation__user-list a{
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  text-transform: none;
+  font-size: 15px;
+}
+
+.search__input {
+  background-color: transparent;
+  border: 0;
+  color: rgba(0, 0, 0, 0.3);
+  height: 48px;
+  width: 356px;
+}
+.search__input::-webkit-input-placeholder {color: rgba(0, 0, 0, 0.3);} 
+.search__input::-moz-placeholder {color: rgba(0, 0, 0, 0.3);}
+
+.search__input:hover {color: rgba(0, 0, 0, 0.6);}
+.search__input:hover::-moz-placeholder {color: rgba(0, 0, 0, 0.6);}
+.search__input:hover::-webkit-input-placeholder {color: rgba(0, 0, 0, 0.6);}
+
+.search__input:focus {
+  outline: none;
+  border-bottom: 2px solid black;
+}
+
+.search__button {
+  margin-left: 0;
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 15px;
+  height: 50px;
+  color: black;
+  /* display: none; */
+}
+
+/*.search__input:focus + .search__button {display: inline-block;}*/
+
+.search__button:hover {
+  background-color: black;
+  color: rgba(255, 255, 255, 1);
+}
+
+.search__button:active,
+.search__button:focus {
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);}
+
+.header-navigation__catalog-list {display: none;}
+
+.header-navigation__catalog-list a{
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  text-transform: none;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+}
+
+.header-navigation__goods-item__catalog:hover .header-navigation__catalog-list {display: block;}
+
+
+
+/*ОСНОВНОЕ СОДЕРЖАНИЕ*/
+/*СЛАЙДЕР*/
+
+.good__number {
+  font-size: 179px; 
+  margin: 0;
+  color: black;
+}
+
+.slider-promo__good__description b {
+  font-size: 47px;
+  line-height: 56px;
+}
+
+.slider-promo__good__description p {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.slider-promo__good__feature b,
+.slider-promo__good__feature tr {
+  font-family: 'Giltoy', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 36px;
+}
+
+.slider-promo__good__feature th,
+.slider-promo__good__feature span {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.catalog-categories__list {
+  list-style: none;
+  height: 240px;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-categories__item {
+  display: block;
+  float: left;
+  padding: 0;
+  margin: 0;
+  width: 160px;
+  height: 240px;
+  margin-right: 40px;
+}
+
+.catalog-categories__item:last-of-type {margin-right: 0;}
+
+.catalog-categories__item a {color: black;}
+
+.catalog-categories__item figure{
+  padding: 0;
+  margin: 0;
+  width: 160px;
+  height: 240px;
+}
+.catalog-categories__item figcaption {
+  background-color: white;
+  height: 80px;
+  text-align: left;
+  font-size: 16px;
+  padding-top: 38px;
+}
+
+.item-img_bg-color {
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
+  position: relative;
+}
+
+.item-img_bg-color img {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.catalog-categories__item a:hover .item-img_bg-color,
+.catalog-categories__item a:focus .item-img_bg-color {
+  background-color: #f0c52e;
+}
+
+.catalog-categories__item a:active .item-img_bg-color img,
+.catalog-categories__item a:active figcaption {
+  opacity: 0.3;
+}
+/*ПОДВАЛ*/
