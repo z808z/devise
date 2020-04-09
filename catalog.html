@@ -7,8 +7,9 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <div class="bg-color-header"></div>
   <header>
-    <h1 class="logo"><a>Device</a></h1>
+    <h1 id="logo"><a class="logo" href="#">Device</a></h1>
     <nav class="header-navigation">
       <h2 class="hidden">Навигация</h2>
       <div class="column column-right">
@@ -37,30 +38,37 @@
             <li class="header-navigation__goods-item            
                        header-navigation__goods-item__search">
               <form action="#">
-                <label><input type="search">Поиск по сайту</label>
+                <input class="search__input" type="search" placeholder="Поиск по сайту"><input class="search__button" type="submit" value="Найти">
               </form>
             </li>
             <li class="header-navigation__goods-item
                        header-navigation__goods-item__catalog">
               <a href="#">Каталог товаров</a>
               <ul class="header-navigation__catalog-list">
-                <li class="header-navigation__catalog-item">
-                  <a href="#">Виртуальная реальность</a>
-                </li>
-                <li class="header-navigation__catalog-item">
-                  <span>Моноподы для селфи</span>
-                </li>
-                <li class="header-navigation__catalog-item">
-                  <a href="#">Экшн-камеры</a>
-                </li>
-                <li class="header-navigation__catalog-item">
-                  <a href="#">Фитнес-браслеты</a>
-                </li>
-                <li class="header-navigation__catalog-item">
-                  <a href="#">Умные часы</a></li>
-                <li class="header-navigation__catalog-item">
-                  <a href="#">Квадрокоптеры</a>
-                </li>
+                <div class="catalog-item_column">
+                  <li class="header-navigation__catalog-item">
+                    <a href="#">Виртуальная реальность</a>
+                  </li>
+                  <li class="header-navigation__catalog-item">
+                    <a href="#">Моноподы для селфи</a>
+                  </li>
+                  <li class="header-navigation__catalog-item">
+                    <a href="#">Экшн-камеры</a>
+                  </li>
+                </div><!--
+                --><div class="catalog-item_column">
+                  <li class="header-navigation__catalog-item">
+                    <a href="#">Фитнес-браслеты</a>
+                  </li>
+                  <li class="header-navigation__catalog-item">
+                    <a href="#">Умные часы</a>
+                  </li>
+                </div><!--
+                --><div class="catalog-item_column">
+                  <li class="header-navigation__catalog-item">
+                    <a href="#">Квадрокоптеры</a>
+                  </li>
+                </div>
               </ul>
             </li>
           </ul>
