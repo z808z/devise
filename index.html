@@ -8,8 +8,10 @@
 </head>
 <body>
   <div style="background-color: #f7e296; width: 1160px; height: 300px; position: absolute; z-index: -1; top: 40px;"></div>
+  <!-- что это?) если фон, то лучше его сделать через ::before -->
   <header>
     <h1 id="logo"><a class="logo" href="#">Device</a></h1>
+    <!-- id не нужно, сам лого не по БЭМ -->
     <nav class="header-navigation">
       <h2 class="hidden">Навигация</h2>
       <section class="header-navigation__user">
@@ -25,7 +27,9 @@
         <ul class="header-navigation__user-list">
           <li class="header-navigation__user-item        
                      header-navigation__user-item__login">
+            <!-- здесь и далее ошибка) не может быть двух элементов в одном. используй миксы https://ru.bem.info/methodology/key-concepts/#Миксы -->
             <a href="#">Войти</a>
+            <!-- header-navigation__link -->
           </li>
           <li class="header-navigation__user-item        
                      header-navigation__user-item__compare">
@@ -63,7 +67,9 @@
                   <a href="#">Умные часы</a>
                 </li>
               </div><!--
-              --><div class="catalog-item_column">
+              -->
+              <!-- а эти комменты случайность?) -->
+              <div class="catalog-item_column">
                 <li class="header-navigation__catalog-item">
                   <a href="#">Квадрокоптеры</a>
                 </li>
@@ -98,7 +104,7 @@
                       slider-promo__good-1">
 
           <h3 class="good__number"><span class="hidden">Товар</span>01</h3>
-
+          <!-- а где объявляется блок good? -->
         <div class="column column-left">
           <section class="slider-promo__good__image">
             <h4 class="hidden">Изображение товара</h4>
@@ -115,7 +121,9 @@
             <a class="button" href="#">Подробнее</a>
             <table class="slider-promo__good__feature">
               <caption class="hidden">Характеристики</caption>
+              <!-- в проде ни разу не видел caption -->
               <tr>
+              <!-- классы -->
                 <td>8,5 м</td>
                 <td>5 кг</td>
                 <td>Карбон</td>
@@ -131,6 +139,7 @@
       </article>
       <article class="slider-promo__good 
                       slider-promo__good-2">
+        <!-- испльзуй модификаторы -->
         <h3 class="good__number"><span class="hidden">Товар</span>02</h3>
         <div class="column column-left">
           <section class="slider-promo__good__image">
@@ -147,6 +156,7 @@
           <a class="button" href="#">Подробнее</a>
           <p class="slider-promo__good__feature">
             <b>48 часов</b><br>
+            <!-- лучше тут в спан и жирность через стили -->
             <span>Без подзарядки</span>
           </p>
         </section>
@@ -191,6 +201,7 @@
           <a href="#">
             <figure>
               <div class="item-img_bg-color"><img src="img/icons/categories/1_virtual-reality.svg" alt="#"></div>
+              <!-- тут div не нужен -->
               <figcaption class="item__name">Виртуальная реальность</figcaption>
             </figure>
           </a>
@@ -266,6 +277,7 @@
         </section>
       </div>
       <div class="bg-color-services"></div>
+      <!-- опять же begore -->
     </section>
     <section class="brands">
       <h2 class="hidden">Бренды</h2>
@@ -277,13 +289,16 @@
       </ul>
     </section>
     <div class="main-container">
+    <!-- main-container? -->
         <section class="about-us column colum-left">
+        <!-- about-us--left проще тогда модификаторы использовать -->
           <h3>О нас</h3>
             <p>Огромный выбор гаджетов не оставит равнодушным гика, который естьв каждом из нас.</p>
             <p>Мы можем доставить ваш товар в самые отдаленные точки России!DEVICE работает со многими
             транспортными
             компаниями</p>
           <ul class="about-us__partners-delivery">
+            <!-- тут можно было просто about-us__list -->
             <li>Деловые Линии</li>
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
@@ -305,6 +320,7 @@
       <section class="footer-navigation__user">
         <h3 class="hidden">Нижняя навигация пользователя</h3>
         <a href="#logo"><b class="logo">Devise</b></a>
+        <!-- b? да ещё и с классом. просто класс на a и жирность через стили -->
         <ul class="footer-navigation__user-list">
           <li class="footer-navigation__user-item
                      footer-navigation__user-item__login">
@@ -324,6 +340,7 @@
         <h3 class="hidden">Нижная новигация по сайту</h3>
         <p>г. Москва, ул. Строителей, 15</p>
         <ul class="footer-navigation__site-list">
+          <!-- почему именно site? -->
             <li class="footer-navigation__site-item"><a href="#">Доставка</a></li><!--
             --><li class="footer-navigation__site-item"><a href="#">Гарантия</a></li><!--
             --><li class="footer-navigation__site-item"><a href="#">Контакты</a></li>
