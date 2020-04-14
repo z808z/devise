@@ -1,3 +1,4 @@
+/* normalize.css */
 @font-face {
   font-family: 'Gilroy ExtraBold';
   src: url(fonts/gilroyextrabold.woff2) format('woff2');
@@ -31,7 +32,7 @@ body {
 
 a {text-decoration: none;}
 h1, h2, h3, h4, b, dl, dd {margin: 0; padding: 0;}
-
+/* единообразие, всё с новых строк */
 .hidden {
   position: absolute;
   width: 1px;
@@ -47,7 +48,9 @@ h1, h2, h3, h4, b, dl, dd {margin: 0; padding: 0;}
 .column-right {float: right;}
 .column {width: 560px;}
 .main-container {margin-bottom: 80px; height: 580px; padding-top: 60px;}
+/* внешние отступы делаешь margin, внутренние padding. что-то одно в данном случае */
 .container.footer-navigation {padding: 60px 0; height: 325px;}
+/* зачем здесь container? */
 
 /*КНОПКА*/
 
@@ -88,12 +91,14 @@ button.button:hover::after,
 button.button:focus::after {
   bottom: -2px;
 }
+/* достаточно класса */
 
 .button:active {color: rgba(0, 0, 0, 0.3);}
 
 /*КНОПКА В СЕРВИСАХ*/
 .services__item .button, 
 .services__item .button::after {width: 160px;}
+/* а можно было просто .services__btn */
 
 .services__item .button:active {color: rgb(247, 225, 132);}
 .services__item .button:active::after {
@@ -109,7 +114,7 @@ button.button:focus::after {
 /*КНОПКА В ТОВАРАХ*/
 .good__item_hover .button {width: 100%;}
 .good__item_hover .button::after {left: 66px;}
-
+/* что-то совсем не то с названием класса */
 
 /*ИКОНКИ В МЕНЮ ПОЛЬЗОВАТЕЛЯ*/
 
@@ -161,12 +166,12 @@ header {
   background-color: #f7e296;
   position: relative;
 }
-
+/* .header */
 header a{
   text-transform: uppercase;
   color: black;
 }
-
+/* а точно всем "a"?) */
 header a:hover,
 header a:focus {opacity: 0.6;}
 header a:active {opacity: 0.3;} 
@@ -182,6 +187,7 @@ margin: 0;
   font-size: 48px;
   line-height: 34px;
 }
+/* чтоб наверняка?) id лишний */
 #logo {position: absolute; top: -18px}
 
 .header-navigation__user,
@@ -354,6 +360,7 @@ main {width: 1160px;}
   margin: 0;
   padding: 0;
 }
+/* а если элементов будет больше? на 500px? */
 
 .catalog-categories__item {
   display: block;
@@ -368,13 +375,14 @@ main {width: 1160px;}
 .catalog-categories__item:last-of-type {margin-right: 0;}
 
 .catalog-categories__item a {color: black;}
-
+/* единообразие в обозначении цветов */
 .catalog-categories__item figure{
   padding: 0;
   margin: 0;
   width: 160px;
   height: 240px;
 }
+/* фикс. высота */
 .catalog-categories__item figcaption {
   background-color: white;
   height: 80px;
@@ -538,6 +546,7 @@ margin-bottom: 40px;
 }
 
 .about-us::before, .contacts::before {
+  /* не объединяй так. а если тебе придётся в одном из этих классов что-то поменять? */
   content: "";
   position: absolute;
   display: block;
